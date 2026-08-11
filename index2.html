@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Contoh Tag Dasar HTML 2</title>
+    </head>
+    <body>
+
+    <!-- Gambar -->
+    <img src="foto/agus.jpg" alt="Contoh Gambar" width="150" height="150">
+
+    <!-- List Tidak Terurut -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- List Terurut -->
+    <ol>
+        <li>Pertama</li>
+        <li>Kedua</li>
+        <li>Ketiga</li>
+    </ol>
+
+    <!-- List Deskripsi -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <!-- Tabel -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Usia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Budi</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Sari</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <div>
+    <!-- Form -->
+    <form action="#" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal"><br><br>
+
+        <p>Jenis Kelamin:</p>
+        <input type="radio" id="lk" name="gender" value="laki-laki">
+        <label for="lk">Laki-laki</label><br>
+        <input type="radio" id="pr" name="gender" value="perempuan">
+        <label for="pr">Perempuan</label><br><br>
+
+        <p>Hobi:</p>
+        <input type="checkbox" id="membaca" name="hobi" value="membaca">
+        <label for="membaca">Membaca</label><br>
+        <input type="checkbox" id="olahraga" name="hobi" value="olahraga">
+        <label for="olahraga">Olahraga</label><br><br>
+
+        <label for="kota">Kota:</label>
+        <select id="kota" name="kota">
+            <option value="jakarta">Jakarta</option>
+            <option value="bandung">Bandung</option>
+            <option value="surabaya">Surabaya</option>
+        </select><br><br>
+
+        <label for="pesan">Pesan:</label><br>
+        <textarea id="pesan" name="pesan" rows="4" cols="50" placeholder="Tulis pesan..."></textarea><br><br>
+
+        <button type="submit">Kirim</button>
+        <input type="reset" value="Reset">
+    </form>
+    </div>
+
+    <!-- Span -->
+        <p align="center">Ini di dalam elemen <b>div</b>.</p>
+        <p>Ini <span style="color: red;">teks berwarna merah</span> di dalam span.</p>
+    
+
+    <!-- Komentar HTML -->
+    <!-- Ini adalah komentar, tidak akan tampil di browser -->
+
+    <!-- Sumber kutipan -->
+    <blockquote>
+        "Ini adalah contoh kutipan panjang dengan blockquote."
+    </blockquote>
+    <p>Kutipan singkat: <q>Ini adalah kutipan.</q></p>
+
+    <!-- Character codes -->
+    <p>Simbol: &copy; &reg; &amp; &lt; &gt; &nbsp;&nbsp;spasi</p>
+
+</body>
+</html>
