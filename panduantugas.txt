@@ -1,0 +1,170 @@
+=============================================================
+   PANDUAN TUGAS: MEMBUAT TAMPILAN WEB SEDERHANA
+   (Panduan Sangat Jelas, Langkah demi Langkah)
+=============================================================
+
+TUGAS: Buatlah 3 halaman web (login, daftar, home)
+menggunakan HTML MURNI. Tanpa CSS, tanpa <div>.
+
+Ikuti panduan ini satu langkah demi satu langkah.
+Jangan melompati langkah, agar hasilnya benar.
+
+
+-------------------------------------------------------------
+BAGIAN 1: PERSIAPAN (WAJIB DILAKUKAN DULU)
+-------------------------------------------------------------
+
+LANGKAH 1 - Buat folder tugas
+  - Buka File Explorer (atau halaman utama komputer).
+  - Buat folder baru dengan format nama: aut-namakamu (selanjutnya folder ini kita panggil folder projek)
+
+LANGKAH 2 - Buat folder images
+  - Masuk ke dalam folder projek.
+  - Klik kanan, pilih New > Folder.
+  - Beri nama folder tersebut: images (huruf kecil semua).
+
+LANGKAH 3 - Siapkan gambar
+  - Siapkan 1 file gambar (foto/jpg/png). Contoh: pemandangan.jpg
+  - Salin file gambar tersebut ke dalam folder images.
+  - PASTIKAN nama file persis sama saat dipakai nanti.
+  Contoh gambar di dalam images bernama: pemandangan.jpg
+
+  Nanti struktur folder kamu harus seperti ini:
+
+      folder Projek/
+
+      |-- login.html
+      |-- daftar.html
+      |-- home.html
+      |-- images/
+          |-- pemandangan.jpg
+
+-------------------------------------------------------------
+BAGIAN 2: MEMBUAT HALAMAN PERTAMA (login.html)
+-------------------------------------------------------------
+
+FUNGSI:
+  Halaman untuk pengguna masuk ke sistem (log in).
+
+LANGKAH 5 - Buat file login.html
+
+PENJELASAN KODE login.html (dari atas ke bawah):
+  - <h1>Login</h1>
+      Judul besar paling atas halaman.
+  - <form action="home.html" method="get">
+      Membuat tempat pengisian. Yang menarik:
+      action="home.html" => saat tombol diklik, pindah ke home.html.
+    - <input type="text" name="username">
+      Kotak isian teks. name="username" adalah nama data.
+  - <input type="password" name="password">
+      Kotak isian sandi. Ketikan akan tampil sebagai titik-titik
+      agar tidak terlihat orang lain.
+  - <input type="submit" value="Masuk">
+      Tombol yang tampil bertuliskan "Masuk". Saat diklik,
+      form dikirim dan pindah ke home.html.
+  - <p>Belum punya akun? <a href="daftar.html">Daftar</a></p>
+      Tautan agar pengguna yang belum punya akun bisa pindah
+      ke halaman daftar.
+
+
+-------------------------------------------------------------
+BAGIAN 3: MEMBUAT HALAMAN KEDUA (daftar.html)
+-------------------------------------------------------------
+
+FUNGSI:
+  Halaman untuk pengguna membuat akun BARU.
+
+LANGKAH 6 - Buat file daftar.html
+
+ PENJELASAN KODE daftar.html:
+  - <input type="email" name="email">
+      Kotak isian email. Browser akan memeriksa format email.
+  - <input type="date" name="tanggal_lahir">
+      Kotak pilihan TANGGAL. Saat diklik muncul kalender.
+  - <input type="file" name="foto" accept="image/*">
+      Tombol untuk memilih file gambar/foto dari komputer.
+      accept="image/*" berarti hanya menerima jenis gambar.
+  - Semua isian ditulis di dalam <table> sehingga label
+    dan kotak isian sejajar RAPI.
+  - Tautan <a href="login.html">Login</a> untuk kembali
+    ke halaman login.
+
+
+-------------------------------------------------------------
+BAGIAN 4: MEMBUAT HALAMAN KETIGA (home.html)
+-------------------------------------------------------------
+
+FUNGSI:
+  Halaman yang muncul setelah login/daftar berhasil.
+
+LANGKAH 7 - Buat file home.html
+
+PENJELASAN KODE home.html:
+  - <h1>Selamat Datang</h1>
+      Judul sambutan.
+  - <p>Anda berhasil masuk.</p>
+      Kalimat sambutan singkat.
+  - <img src="images/pemandangan.jpg" alt="Pemandangan">
+      PERHATIAN BAIK-BAIK:
+      - src  = alamat file gambar = "images/pemandangan.jpg"
+        Artinya: dari halaman home.html, masuk ke folder
+        images lalu ambil file pemandangan.jpg.
+      - Jika nama file gambar kamu berbeda, GANTI nama
+        di dalam src dengan nama file milikmu.
+      - alt = teks pengganti bila gambar tidak bisa tampil.
+  - <p><a href="login.html">Logout</a></p>
+      Tautan kembali ke halaman login (keluar dari sistem).
+
+
+-------------------------------------------------------------
+BAGIAN 6: CARA MENJALANKAN / MENCOBA HASIL
+-------------------------------------------------------------
+
+LANGKAH 8 - Buka hasil di browser
+  1. Masuk ke folder projek.
+  2. Klik DUA KALI (double click) pada file login.html.
+     File akan terbuka di browser (Chrome / Edge / Firefox).
+  3. Isi username dan password apa saja, lalu klik "Masuk".
+     Harusnya kamu berpindah ke halaman home.html.
+  4. Kembali ke daftar, klik tautan "Daftar" pada login.
+     Harusnya berpindah ke halaman daftar.html.
+  5. Isi semua data pada daftar (termasuk tanggal lahir
+     dan pilih foto), klik "Daftar". Harusnya pindah ke home.
+  6. Di home, pastikan GAMBAR PEMANDANGAN TAMPIL.
+     Jika tidak tampil, periksa:
+       - folder images sudah ada? (huruf kecil semua)
+       - nama file di src persis sama dengan nama file asli?
+  7. Klik "Logout" untuk kembali ke login.html.
+
+
+-------------------------------------------------------------
+BAGIAN 7: APA ITU TAG YANG KAMU PAKAI? (RINGKASAN)
+-------------------------------------------------------------
+
+  <html>      = pembungkus seluruh halaman
+  <head>      = bagian kepala (info, tidak tampil)
+  <title>     = judul tab browser
+  <meta>      = informasi tambahan (misal charset)
+  <body>      = bagian isi yang tampil
+  <h1>        = judul besar
+  <p>         = paragraf
+  <a href>    = tautan/link ke halaman lain
+  <img src>   = menampilkan gambar
+  <form>      = tempat kumpulan isian + tombol
+  <table>     = tabel; dipakai agar form rapi
+  <tr>        = satu baris tabel
+  <td>        = satu kolom dalam baris
+  <input>     = kotak isian / tombol di dalam form
+  <br>        = (tidak dipakai) ganti baris
+
+JENIS-JENIS <input> yang digunakan:
+  - type="text"     : isian teks biasa
+  - type="password" : isian sandi (tertutup titik)
+  - type="email"    : isian email (diperiksa formatnya)
+  - type="date"     : pilihan tanggal (muncul kalender)
+  - type="file"     : pilih file dari komputer
+  - type="submit"   : tombol kirim form
+
+
+Selamat mengerjakan! Ikuti langkah 1 sampai 10
+secara berurutan, hasilmu pasti benar.
